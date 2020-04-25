@@ -1,13 +1,14 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" /><font></font>
         <title>Formulario</title>
     </h:head>
-    
-   <h:body> 
+
+    <h:body> 
 
         <div class="container">
 
@@ -54,13 +55,38 @@
                                 <h:inputText  value="" class="form-control"/>
                             </div>
                         </div>
-                        <div>
-                            <center> <h:commandButton class="btn btn-primary"  value="ENVIAR" />  </center>
+                        <div class="form-group row">
+                            <h4 class="col-sm-3 text-primary">Educacion:</h4>
+                            <div class="col-sm-9">
+                                <h:selectOneRadio value = "" >
+                                    <f:selectItem itemValue ="Primaria" itemLabel ="Primaria" />
+                                    <f:selectItem itemValue ="Secundaria" itemLabel ="Secundaria"/>
+                                     <f:selectItem itemValue ="Tecnico" itemLabel ="Tecnico" />
+                                    <f:selectItem itemValue ="Tecnologico" itemLabel ="Tecnologico" />
+                                     <f:selectItem itemValue ="Profesional" itemLabel ="Profesional" />
+                                    <f:selectItem itemValue ="Magister" itemLabel ="Magiste" />
+                                </h:selectOneRadio >
+                            </div>
                         </div>
-                       
+                        <div class="form-group row">
+                            <h4 class="col-sm-4 text-primary">Idiomas:</h4>
+                            <div class="col-sm-8">
+                                <h:selectManyCheckbox class="form-check-input" value ="" >                                    
+                                    <f:selectItem itemValue="español" itemLabel= "Español" />
+                                    <f:selectItem itemValue="ingles" itemLabel= "Ingles" />
+                                    <f:selectItem itemValue="frances" itemLabel= "Frances" />
+                                    <f:selectItem itemValue="aleman" itemLabel= "Aleman" />
+                                </h:selectManyCheckbox>
+                            </div>
+                        </div>
+
+                        <div>
+                            <center> <h:commandButton class="btn btn-primary"  value="ENVIAR"  />  </center>
+                        </div>
+
                     </h:form>
                 </div>
-                
+
                 <div class="col-3 col-sm-2"></div>
 
             </div>            
