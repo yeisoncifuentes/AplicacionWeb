@@ -22,66 +22,66 @@
                         <div class="form-group row">
                             <h4 class="col-sm-3 text-primary">Nombre:</h4>
                             <div class="col-sm-9">
-                                <h:inputText  value="${index.nombre}" class="form-control"/>
+                                <h:inputText  value="#{index.nombre}" class="form-control"/>
                             </div>
                         </div>
-                        <!--<div class="form-group row">
+                        <div class="form-group row">
                             <h4 class="col-sm-3 text-primary">Apellido:</h4>
                             <div class="col-sm-9">
-                                <h:inputText  value="" class="form-control"/>
+                                <h:inputText  value="#{index.apellido}" class="form-control"/>
                             </div>
                         </div>
                         <div class="form-group row">
                             <h4 class="col-sm-3 text-primary">Cedula:</h4>
                             <div class="col-sm-9">
-                                <h:inputText  value="" class="form-control"/>
+                                <h:inputText  value="#{index.cedula}" class="form-control"/>
                             </div>
                         </div>
                         <div class="form-group row">
                             <h4 class="col-sm-3 text-primary">Fecha Nacimiento:</h4>
                             <div class="col-sm-9">
-                                <h:inputText  value="" class="form-control"/>
+                                <h:inputText  value="#{index.fechaNacimiento}" class="form-control"/>
                             </div>
                         </div>
                         <div class="form-group row">
                             <h4 class="col-sm-3 text-primary">Dias trabajados:</h4>
                             <div class="col-sm-9">
-                                <h:inputText  value="" class="form-control"/>
+                                <h:inputText  value="#{index.diasTrabajados}" class="form-control"/>
                             </div>
                         </div>
                         <div class="form-group row">
                             <h4 class="col-sm-3 text-primary">Sueldo Base:</h4>
                             <div class="col-sm-9">
-                                <h:inputText  value="" class="form-control"/>
+                                <h:inputText  value="#{index.sueldoBase}" class="form-control"/>
                             </div>
                         </div>
                         <div class="form-group row">
                             <h4 class="col-sm-3 text-primary">Educacion:</h4>
                             <div class="col-sm-9">
-                                <h:selectOneRadio value = "" >
+                                <h:selectOneRadio value = "#{index.educacion}" >
                                     <f:selectItem itemValue ="Primaria" itemLabel ="Primaria" />
                                     <f:selectItem itemValue ="Secundaria" itemLabel ="Secundaria"/>
-                                     <f:selectItem itemValue ="Tecnico" itemLabel ="Tecnico" />
+                                    <f:selectItem itemValue ="Tecnico" itemLabel ="Tecnico" />
                                     <f:selectItem itemValue ="Tecnologico" itemLabel ="Tecnologico" />
-                                     <f:selectItem itemValue ="Profesional" itemLabel ="Profesional" />
-                                    <f:selectItem itemValue ="Magister" itemLabel ="Magiste" />
+                                    <f:selectItem itemValue ="Profesional" itemLabel ="Profesional" />
+                                    <f:selectItem itemValue ="Magister" itemLabel ="Magister" />
                                 </h:selectOneRadio >
                             </div>
                         </div>
                         <div class="form-group row">
                             <h4 class="col-sm-4 text-primary">Idiomas:</h4>
                             <div class="col-sm-8">
-                                <h:selectManyCheckbox class="form-check-input" value ="" >                                    
+                                <h:selectManyCheckbox class="form-check-input" value ="#{index.idiomas}"> 
                                     <f:selectItem itemValue="español" itemLabel= "Español" />
                                     <f:selectItem itemValue="ingles" itemLabel= "Ingles" />
                                     <f:selectItem itemValue="frances" itemLabel= "Frances" />
                                     <f:selectItem itemValue="aleman" itemLabel= "Aleman" />
                                 </h:selectManyCheckbox>
                             </div>
-                        </div>-->
+                        </div>
 
                         <div>
-                            <center> <h:commandButton class="btn btn-primary"  value="ENVIAR" action="${index.capturarInfo()}"/>  </center>
+                            <center> <h:commandButton class="btn btn-primary"  value="ENVIAR" action="#{index.capturarDatos()}"/>  </center>
                         </div>
 
                     </h:form>
