@@ -22,10 +22,10 @@
                         <div class="form-group row">
                             <h4 class="col-sm-3 text-primary">Nombre:</h4>
                             <div class="col-sm-9">
-                                <h:inputText  value="" class="form-control"/>
+                                <h:inputText  value="${index.nombre}" class="form-control"/>
                             </div>
                         </div>
-                        <div class="form-group row">
+                        <!--<div class="form-group row">
                             <h4 class="col-sm-3 text-primary">Apellido:</h4>
                             <div class="col-sm-9">
                                 <h:inputText  value="" class="form-control"/>
@@ -78,10 +78,10 @@
                                     <f:selectItem itemValue="aleman" itemLabel= "Aleman" />
                                 </h:selectManyCheckbox>
                             </div>
-                        </div>
+                        </div>-->
 
                         <div>
-                            <center> <h:commandButton class="btn btn-primary"  value="ENVIAR"  />  </center>
+                            <center> <h:commandButton class="btn btn-primary"  value="ENVIAR" action="${index.capturarInfo()}"/>  </center>
                         </div>
 
                     </h:form>

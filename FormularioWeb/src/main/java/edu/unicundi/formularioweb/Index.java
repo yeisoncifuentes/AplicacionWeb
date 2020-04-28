@@ -15,11 +15,21 @@ import javax.enterprise.context.RequestScoped;
 @Named(value = "index")
 @RequestScoped
 public class Index {
-
+    private String nombre;
+    
     /**
      * Creates a new instance of Index
      */
     public Index() {
+        
+    }
+    
+    public void capturarInfo(){
+        
+    }
+
+    public String getNombre() {
+        return nombre;
     }
     
 }
