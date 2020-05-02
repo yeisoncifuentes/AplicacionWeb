@@ -35,7 +35,7 @@ public class Index implements Serializable {
         System.out.println("Estoy en el constructor");
     }
 
-    public void capturarDatos() {
+    public String capturarDatos() {
         if (educacion == null) {
             educacion = "Ningun rango de educación";
         }
@@ -54,6 +54,7 @@ public class Index implements Serializable {
         for (int i = 0; i < empleado.getIdiomas().length; i++) {
             System.out.println("Idioma" + (i + 1) + ": " + empleado.getIdiomas()[i]);
         }
+        return "faces/mostrarDatos.xhtml?faces-redirect=true";
     }
 
     public Empleado getEmpleado() {

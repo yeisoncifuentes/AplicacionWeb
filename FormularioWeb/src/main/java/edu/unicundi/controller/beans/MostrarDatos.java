@@ -5,6 +5,8 @@
  */
 package edu.unicundi.controller.beans;
 
+import java.io.Serializable;
+import javax.faces.bean.ManagedProperty;
 import javax.inject.Named;
 import javax.faces.view.ViewScoped;
 
@@ -14,12 +16,26 @@ import javax.faces.view.ViewScoped;
  */
 @Named(value = "mostrarDatos")
 @ViewScoped
-public class MostrarDatos {
-
+public class MostrarDatos implements Serializable{
+    
+    @ManagedProperty("#{index}")
+    private Index datosEmpleado;
     /**
      * Creates a new instance of MostrarDatos
      */
     public MostrarDatos() {
+    }
+    
+    public String obtenerDatos(){
+        return "";
+    }
+
+    public Index getDatosEmpleado() {
+        return datosEmpleado;
+    }
+
+    public void setDatosEmpleado(Index datosEmpleado) {
+        this.datosEmpleado = datosEmpleado;
     }
     
 }
