@@ -5,37 +5,72 @@
  */
 package edu.unicundi.controller.beans;
 
+import edu.unicundi.model.Empleado;
 import java.io.Serializable;
-import javax.faces.bean.ManagedProperty;
+import javax.annotation.PostConstruct;
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
-import javax.faces.view.ViewScoped;
+import javax.inject.Inject;
 
 /**
  *
  * @author cass465
  */
 @Named(value = "mostrarDatos")
-@ViewScoped
+@RequestScoped
 public class MostrarDatos implements Serializable{
     
-    @ManagedProperty("#{index}")
+    @Inject
     private Index datosEmpleado;
+    private Empleado empleado;
     /**
      * Creates a new instance of MostrarDatos
      */
     public MostrarDatos() {
+        System.out.println("Estoy en el constructor de MostrarDatos");
     }
     
-    public String obtenerDatos(){
-        return "";
+    @PostConstruct
+    public void asignarDatos(){
+        this.empleado = datosEmpleado.getEmpleado();
+        this.empleado.setSueldoTotal(calcularSueldoTotal());
     }
-
+    
+    public int calcularSueldoTotal(){
+        int sueldoTotal = this.empleado.getSueldoBase();
+        switch(this.empleado.getEducacion()){
+            case "Tecnico":
+                sueldoTotal += 5000;
+                break;
+            case "Tecnologico":
+                sueldoTotal += 15000;
+                break;
+            case "Profesional":
+                sueldoTotal += 30000;
+                break;
+            case "Magister":
+                sueldoTotal += 40000;
+                break;
+        }
+        sueldoTotal += (this.empleado.getIdiomas().length)*10000;
+        sueldoTotal *= this.empleado.getDiasTrabajados();
+        return sueldoTotal;
+    }
+    
     public Index getDatosEmpleado() {
         return datosEmpleado;
     }
 
     public void setDatosEmpleado(Index datosEmpleado) {
         this.datosEmpleado = datosEmpleado;
+    }
+
+    public Empleado getEmpleado() {
+        return empleado;
+    }
+
+    public void setEmpleado(Empleado empleado) {
+        this.empleado = empleado;
     }
     
 }

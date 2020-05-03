@@ -71,5 +71,9 @@ public class Empleado implements Serializable{
     public int getSueldoTotal() {
         return sueldoTotal;
     }
+
+    public void setSueldoTotal(int sueldoTotal) {
+        this.sueldoTotal = sueldoTotal;
+    }
     
 }

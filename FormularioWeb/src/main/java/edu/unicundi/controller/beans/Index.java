@@ -7,15 +7,15 @@ package edu.unicundi.controller.beans;
 
 import edu.unicundi.model.Empleado;
 import java.io.Serializable;
+import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
-import javax.faces.view.ViewScoped;
 
 /**
  *
  * @author YEISON
  */
 @Named(value = "index")
-@ViewScoped
+@SessionScoped
 public class Index implements Serializable {
 
     private Empleado empleado;
@@ -32,7 +32,7 @@ public class Index implements Serializable {
      * Creates a new instance of Index
      */
     public Index() {
-        System.out.println("Estoy en el constructor");
+        System.out.println("Estoy en el constructor de Index");
     }
 
     public String capturarDatos() {
