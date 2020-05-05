@@ -8,20 +8,66 @@ package edu.unicundi.model;
 import java.io.Serializable;
 
 /**
- *
+ *Clase que obtiene todos los datos del empleado
+ * 
  * @author cass465
+ * @version 1.0.0
  */
 public class Empleado implements Serializable{
+    /**
+     * Nombre del empleado
+     */
     private String nombre;
+    /**
+     * Apellido del empleado
+     */
     private String apellido;
+    /**
+     * cedula del empleado
+     */
     private String cedula;
+    /**
+     * fecha de nacimiento del empleado
+     */
     private String fechaNacimiento;
+    
+    /**
+     * dias trabajos del empleado
+     */
     private int diasTrabajados;
+    
+    /**
+     * Sueldo base del empleado
+     */
     private int sueldoBase;
+    
+    /**
+     * educacion del empleado
+     */
     private String educacion;
+    
+    /**
+     * Idiomas que maneja el empleado
+     */
     private String[] idiomas;
+    
+    /**
+     * Suedo total del empleado
+     */
     private int sueldoTotal;
 
+    /**
+     * Constructor de la clase
+     * @param nombre
+     * @param apellido
+     * @param cedula
+     * @param fechaNacimiento
+     * @param diasTrabajados
+     * @param sueldoBase
+     * @param educacion
+     * @param idiomas
+     * @param sueldoTotal 
+     */
     public Empleado(String nombre, String apellido, String cedula, String fechaNacimiento, int diasTrabajados, int sueldoBase, String educacion, String[] idiomas, int sueldoTotal) {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -35,43 +81,82 @@ public class Empleado implements Serializable{
     }
 
     
-    
+    /**
+     * Obtiene el nombre
+     * @return 
+     */
     public String getNombre() {
         return nombre;
     }
 
+    /**
+     * Obtiene el apellido
+     * @return 
+     */
     public String getApellido() {
         return apellido;
     }
 
+    /**
+     * Obtiene la cedula
+     * @return 
+     */
     public String getCedula() {
         return cedula;
     }
 
+    /**
+     * Obtiene la fecha de nacimiento
+     * @return 
+     */
     public String getFechaNacimiento() {
         return fechaNacimiento;
     }
 
+    /**
+     * Obtiene los dias trabajados
+     * @return 
+     */
     public int getDiasTrabajados() {
         return diasTrabajados;
     }
 
+    /**
+     * Obtiene el sueldo base
+     * @return 
+     */
     public int getSueldoBase() {
         return sueldoBase;
     }
 
+    /**
+     * Obtiene la educación 
+     * @return 
+     */
     public String getEducacion() {
         return educacion;
     }
 
+    /**
+     * Obtiene los idiomas
+     * @return 
+     */
     public String[] getIdiomas() {
         return idiomas;
     }
 
+    /**
+     * Obtiene el sueldo total
+     * @return 
+     */
     public int getSueldoTotal() {
         return sueldoTotal;
     }
 
+  /**
+   * Establece el sueldo total
+   * @param sueldoTotal 
+   */
     public void setSueldoTotal(int sueldoTotal) {
         this.sueldoTotal = sueldoTotal;
     }

@@ -13,15 +13,23 @@ import javax.inject.Named;
 import javax.inject.Inject;
 
 /**
- *
+ *Clase controlador que permite mostrar los datos del usuario
+ * 
  * @author cass465
+ * @version 1.0.0
  */
 @Named(value = "mostrarDatos")
 @RequestScoped
 public class MostrarDatos implements Serializable{
     
     @Inject
+    /**
+     * Datos del empleado provenientes del index
+     */
     private Index datosEmpleado;
+    /**
+     * Datos del empleado del modelo
+     */
     private Empleado empleado;
     /**
      * Creates a new instance of MostrarDatos
@@ -36,6 +44,10 @@ public class MostrarDatos implements Serializable{
         this.empleado.setSueldoTotal(calcularSueldoTotal());
     }
     
+    /**
+     * Metodo para calcular el sueldo total del empleado
+     * @return 
+     */
     public int calcularSueldoTotal(){
         int sueldoTotal = this.empleado.getSueldoBase();
         switch(this.empleado.getEducacion()){
@@ -57,18 +69,38 @@ public class MostrarDatos implements Serializable{
         return sueldoTotal;
     }
     
+    /**
+     * Metodo para obtener los datos del index
+     * 
+     * @return datosEmpleado
+     */
     public Index getDatosEmpleado() {
         return datosEmpleado;
     }
 
+    /**
+     * Metodo para establecer los datos del index
+     * 
+     * @param datosEmpleado 
+     */
     public void setDatosEmpleado(Index datosEmpleado) {
         this.datosEmpleado = datosEmpleado;
     }
 
+    /**
+     * Metodo para obtener los datos del modelo
+     * 
+     * @return 
+     */
     public Empleado getEmpleado() {
         return empleado;
     }
 
+    /**
+     * Metodo para obtener los datos del modelo
+     * 
+     * @param empleado 
+     */
     public void setEmpleado(Empleado empleado) {
         this.empleado = empleado;
     }
