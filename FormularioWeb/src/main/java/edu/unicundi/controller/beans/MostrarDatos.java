@@ -90,7 +90,7 @@ public class MostrarDatos implements Serializable{
     /**
      * Metodo para obtener los datos del modelo
      * 
-     * @return 
+     * @return empleado
      */
     public Empleado getEmpleado() {
         return empleado;

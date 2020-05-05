@@ -83,7 +83,7 @@ public class Empleado implements Serializable{
     
     /**
      * Obtiene el nombre
-     * @return 
+     * @return nombre
      */
     public String getNombre() {
         return nombre;
@@ -91,7 +91,7 @@ public class Empleado implements Serializable{
 
     /**
      * Obtiene el apellido
-     * @return 
+     * @return apellido
      */
     public String getApellido() {
         return apellido;
@@ -99,7 +99,7 @@ public class Empleado implements Serializable{
 
     /**
      * Obtiene la cedula
-     * @return 
+     * @return cedula
      */
     public String getCedula() {
         return cedula;
@@ -107,7 +107,7 @@ public class Empleado implements Serializable{
 
     /**
      * Obtiene la fecha de nacimiento
-     * @return 
+     * @return fechaNacimiento
      */
     public String getFechaNacimiento() {
         return fechaNacimiento;
@@ -123,7 +123,7 @@ public class Empleado implements Serializable{
 
     /**
      * Obtiene el sueldo base
-     * @return 
+     * @return sueldoBase
      */
     public int getSueldoBase() {
         return sueldoBase;
@@ -131,7 +131,7 @@ public class Empleado implements Serializable{
 
     /**
      * Obtiene la educación 
-     * @return 
+     * @return educacion
      */
     public String getEducacion() {
         return educacion;
@@ -139,7 +139,7 @@ public class Empleado implements Serializable{
 
     /**
      * Obtiene los idiomas
-     * @return 
+     * @return idiomas
      */
     public String[] getIdiomas() {
         return idiomas;
@@ -147,7 +147,7 @@ public class Empleado implements Serializable{
 
     /**
      * Obtiene el sueldo total
-     * @return 
+     * @return sueldoTotal
      */
     public int getSueldoTotal() {
         return sueldoTotal;
