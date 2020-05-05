@@ -1,14 +1,95 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"      
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:head>
-        <title>Datos</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" /><font></font>
+        <title>Datos Usuario</title>
     </h:head>
-    <h:body>
-        #{mostrarDatos.empleado.nombre}
-        #{mostrarDatos.empleado.apellido}
-        #{mostrarDatos.empleado.sueldoTotal}
+
+    <h:body> 
+
+        <div class="container">
+
+            <h1 class="display-4 text-center text-danger  ">DATOS USUARIO</h1>
+            <div class="row">
+
+                <div class="col-3 col-sm-2"></div>
+
+                <div class="col-6 col-sm-8">
+                    <h:form>
+                        <div class="form-group row">
+                            <h4 class="col-sm-3 text-danger" >Nombre:</h4>
+                            <div class="col-sm-9">
+                                <h:outputLabel value="#{mostrarDatos.empleado.nombre}" class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <h4 class="col-sm-3 text-danger">Apellido:</h4>
+                            <div class="col-sm-9">
+                                <h:outputLabel  value="#{mostrarDatos.empleado.apellido}" class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <h4 class="col-sm-3 text-danger">Cedula:</h4>
+                            <div class="col-sm-9">
+                                <h:outputLabel value="#{mostrarDatos.empleado.cedula}" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <h4 class="col-sm-3 text-danger">Fecha Nacimiento:</h4>
+                            <div class="col-sm-9">
+                                <h:outputLabel  value="#{mostrarDatos.empleado.fechaNacimiento}" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <h4 class="col-sm-3 text-danger">Dias trabajados:</h4>
+                            <div class="col-sm-9">
+                                <h:outputLabel  value="#{mostrarDatos.empleado.diasTrabajados}" class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <h4 class="col-sm-3 text-danger">Sueldo Base:</h4>
+                            <div class="col-sm-9">
+                                <h:outputLabel value="#{mostrarDatos.empleado.sueldoBase}" class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <h4 class="col-sm-3 text-danger">Educacion:</h4>
+                            <div class="col-sm-9">
+                                <h:outputLabel  value="#{mostrarDatos.empleado.educacion}" class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <h4 class="col-sm-3 text-danger">Idiomas:</h4>
+                            <div class="col-sm-9">
+                                <ui:repeat var="colores" value="#{mostrarDatos.empleado.idiomas}">
+                                    <li>#{colores}</li>
+                                </ui:repeat>
+                            </div>
+                        </div>   
+
+                        <div class="form-group row">
+                            <h4 class="col-sm-3 text-primary">Sueldo Final:</h4>
+                            <div class="col-sm-9">
+
+                                <h:outputLabel  value="#{mostrarDatos.empleado.sueldoTotal}" class="form-control"/>
+                            </div>
+                        </div>   
+                    </h:form>
+                </div>
+
+                <div class="col-3 col-sm-2"></div>
+
+            </div>            
+
+        </div>
+
     </h:body>
 </html>
+
+
+
+
 
